@@ -1,0 +1,4 @@
+seven_seg.c:12:6:display7SEG	16	static
+seven_seg.c:58:6:update7SEG	16	static
+seven_seg.c:87:6:update7SEG_buffer_auto	16	static
+seven_seg.c:94:6:update7SEG_buffer_manual	16	static
