@@ -8,7 +8,7 @@
 #ifndef INC_SCHEDULER_H_
 #define INC_SCHEDULER_H_
 
-#define SCH_MAX_TASKS 	10
+#define SCH_MAX_TASKS 	8
 #define	NO_TASK_ID		0
 
 void SCH_Init(void);

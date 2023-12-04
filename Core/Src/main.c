@@ -107,24 +107,12 @@ int main(void)
   SCH_Add_Task(fsm_red_manual, 0, 1);
   SCH_Add_Task(fsm_amber_manual, 0, 1);
   SCH_Add_Task(fsm_green_manual, 0, 1);
+  SCH_Add_Task(led_scan, 0, 1);
   SCH_Add_Task(fsm_button_processing, 0, 1);
   setTimer2(125);
-  int index_led = 0;
   while (1)
   {
 	  SCH_Dispatch_Tasks();
-//	  fsm_automatic();
-//	  fsm_red_manual();
-//	  fsm_amber_manual();
-//	  fsm_green_manual();
-//	  fsm_button_processing();
-
-	  // 7_SEG_LEDs scanning
-	  if (timer2_flag == 1) {
-		  update7SEG(index_led++);
-		  if (index_led >= 4) index_led = 0;
-		  setTimer2(125);
-	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

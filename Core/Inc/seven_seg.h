@@ -12,5 +12,6 @@ void display7SEG(int num);
 void update7SEG(int index);
 void update7SEG_buffer_auto(int duration_1, int duration_2);
 void update7SEG_buffer_manual(int mode, int duration);
+void led_scan();
 
 #endif /* INC_SEVEN_SEG_H_ */

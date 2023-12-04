@@ -6,6 +6,7 @@
  */
 
 #include "main.h"
+#include "timer.h"
 
 int seven_seg_buffer[4] = {8, 8, 8, 8};
 
@@ -98,3 +99,11 @@ void update7SEG_buffer_manual(int mode, int duration) {
 	seven_seg_buffer[3] = duration - seven_seg_buffer[2]*10;
 }
 
+int index_led = 0;
+void led_scan() {
+	if (timer2_flag == 1) {
+	  update7SEG(index_led++);
+	  if (index_led >= 4) index_led = 0;
+	  setTimer2(125);
+	}
+}
